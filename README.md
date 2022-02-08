@@ -1,14 +1,13 @@
 # trakt-mark-watched.py
 Python script that will mark shows as watched on trakt.tv when given a nicely formatted filename.
 
-When first run the script will need to initialize. You will be asked for your trakt.tv username (email address). Then you'll be given a web url to get your access code from. Log into trakt.tv and you'll be given a pin that you can copy and paste back into the terminal. If successful the credentials will be stored for future use. If for some reason the creditials expire just erase the $HOME/.pytrakt.json file and reinit.
-
 The filename given should be either formatted like "tv show title s01e01.mp4" or "movie title 1999.mp4".
 
 If the show is not found you may be given a list of possible matches (maybe a year is needed to clarify a tv show).
 There is a corrections file you can add to for automatic name correction (eg. "fool us" to "penn teller fool us").
 
-Trakt.tv 
+When first run the script will need to initialize. Give your trakt.tv username (email address) and you'll be given a trakt.tv url to get your access code from. Copy that code back into the terminal. If successful the credentials will be stored for future use, but if for some reason the creditials expire just erase the $HOME/.pytrakt.json file and reinitialize.
+ 
 <pre>
 usage: trakt-mark-watched.py [-h] [--title TITLE] [--year YEAR] [--season SEASON]
                              [--episode EPISODE] [--info] [--correction]
