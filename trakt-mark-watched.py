@@ -177,7 +177,12 @@ except trakt.errors.NotFoundException:
         for show in search:
             # pretty list of available show variables
             # print(pprint.pformat(vars(show), indent=4, sort_dicts=False))
-            print('  {title} {year}, \tSLUG: {_slug}'.format_map(vars(show)))
+            if '_slug' in vars(show):
+                print('  {title} {year}, \tSLUG: {_slug}'.format_map(vars(show)))
+            elif 'slug' in vars(show):
+                print('  {title} {year}, \tSLUG: {slug}'.format_map(vars(show)))
+            else:
+                print('  {title} {year}'.format_map(vars(show)))
     ans=input('\nAdd a correction (y/N)? ')
     if ans == "y":
         add_correction(opts.title)
