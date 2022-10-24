@@ -15,8 +15,8 @@ if not os.path.isfile(os.path.expanduser('~/.pytrakt.json')):
     username=input("Trakt.py Username: ")
     trakt.init(
         "$username",
-        client_id="bc96766319f7fd457f29be06b4730970d0640125cab0cc433e3e8af2187d6890",
-        client_secret="5f5c7e6204259ee38e8055df39d623862a4ce0f41e441d2f48c42f4174df1c40",
+        client_id="CLIENT_ID",
+        client_secret="CLIENT_SECRET",
         store=True)
     print('Initialization done.')
     exit()
